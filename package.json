@@ -1,0 +1,31 @@
+{
+  "name": "mongoose_skeleton",
+  "version": "1.0.0",
+  "description": "For this assignment, I am creating a workout tracker.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "author": "Adam Espino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aespino87/Fitness_tracker.git"
+  },
+  "keywords": [
+    "Fitness",
+    "Tracker"
+  ],
+  "bugs": {
+    "url": "https://github.com/Aespino87/Fitness_tracker/issues"
+  },
+  "homepage": "https://github.com/Aespino87/Fitness_tracker#readme"
+}
