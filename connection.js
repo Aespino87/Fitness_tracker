@@ -1,17 +1,23 @@
+const express = require("express");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/FitnessTracker");
+const PORT = process.env.PORT || 3000;
 
-//Adds an event listner for when connection is made
-mongoose.connection.once("open",function(){
-    console.log("You are connected..");
-}).on("error", function(error){
-    console.log("Something is wrong with the connection",error)
-})
+const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+app.use(express.static("public"));
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/FitnessTracker", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
+// routes
+app.use(require("./routes/api.js"));
 
-
-/////Referenced https://www.youtube.com/watch?v=oT2HOw3fWp4&list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u&index=3 on setup of code.
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}!`);
+}); 
