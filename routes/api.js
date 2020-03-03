@@ -12,7 +12,7 @@ router.post("/api/workouts/", ({ body }, res) => {
 });
 
 router.put("/api/workouts/:id", ({ body }, res) => {
-  newWorkout.insertMany(body)
+  newWorkout.findByIdAndUpdate({},{ $push: { exercises: _id } }, { new: true })
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
