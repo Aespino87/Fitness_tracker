@@ -2,11 +2,11 @@
   "name": "mongoose_skeleton",
   "version": "1.0.0",
   "description": "For this assignment, I am creating a workout tracker.",
-  "main": "server.js",
+  "main": "connection.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
+    "start": "node connection.js",
+    "watch": "nodemon connection.js",
     "seed": "node seeders/seed.js"
   },
   "author": "Adam Espino",
