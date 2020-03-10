@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+//Puts data to be encoded into the URL-encoded format
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
